@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/WebGoat8
+    working_directory: test/WebGoat8
 
     steps:
       - checkout
