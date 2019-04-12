@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    #working_directory: test/WebGoat8
+    working_directory: ~/WebGoat8
 
     steps:
       - checkout
@@ -36,4 +36,4 @@ jobs:
 
       # run tests!
       #- run: yarn test
-      - run: ./CxConsolePlugin-8.80.2/runCxConsole.cmd scan –v -CxServer http://localhost/ -CxUser admin@cx -CxPassword Security1! -ProjectName "CxServer\WebGoat8_CCI" -reportXML ScanResults.xml -LocationType path  -LocationPath ../WebGoat8
+      - run: ./CxConsolePlugin-8.80.2/runCxConsole.sh scan –v -CxServer http://localhost/ -CxUser admin@cx -CxPassword Security1! -ProjectName "CxServer\WebGoat8_CCI" -reportXML ScanResults.xml -LocationType path  -LocationPath ../WebGoat8
