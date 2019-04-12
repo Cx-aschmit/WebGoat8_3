@@ -27,13 +27,13 @@ jobs:
       #      # fallback to using the latest cache if no exact match is found
       #      - v1-dependencies-
 
-      - run: yarn install
+      #- run: yarn install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      #- save_cache:
+      #    paths:
+      #      - node_modules
+      #    key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      #- run: yarn test
       - run: ./CxConsolePlugin-8.80.2/runCxConsole.sh scan –v -CxServer http://localhost/             -CxUser admin@cx  -CxPassword Security1!    -ProjectName "CxServer\WebGoat8_CCI"  -reportXML ScanResults.xml -LocationType path   -LocationPath ../WebGoat8
